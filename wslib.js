@@ -38,7 +38,7 @@ const wsConnection = (server) => {
 const sendMessages = () => {
   clients.forEach((client) => {
     getMessages().then((result) => {
-      result = JSON.stringify(messages);
+      result = JSON.stringify(result);
       client.send(result);
     });
   });
